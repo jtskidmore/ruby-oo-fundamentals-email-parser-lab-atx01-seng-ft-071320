@@ -17,6 +17,8 @@ class EmailAddressParser
     else
       @emails = @emails.split(' ')
     end
+
+    @emails.@emails.uniq
   end
 
 end
