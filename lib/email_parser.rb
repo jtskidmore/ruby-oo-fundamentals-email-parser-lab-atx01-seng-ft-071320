@@ -18,6 +18,12 @@ class EmailAddressParser
       @emails = @emails.split(' ')
     end
 
+    @emails.each do |addy|
+      if addy.include?(" ")
+        addy.delete(" ")
+      end
+    end
+
     @emails = @emails.uniq
   end
 
