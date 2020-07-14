@@ -8,7 +8,7 @@ class EmailAddressParser
   email_list =
 
   def initialize (emails)
-    email_list = emails.parse
+    email_list = emails.split
   end
 
 email_list
