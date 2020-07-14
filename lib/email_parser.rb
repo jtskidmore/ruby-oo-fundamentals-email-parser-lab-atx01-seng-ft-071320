@@ -12,17 +12,7 @@ class EmailAddressParser
   end
 
   def parse
-    if @emails.include?(',')
-      @emails = @emails.split(", ")
-    else
-      @emails = @emails.split(' ')
-    end
-
-    @emails.each do |addy|
-      if addy.include?(" ")
-        addy.delete(" ")
-      end
-    end
+    @emails = @emails.split(/, | /)
 
     @emails = @emails.uniq
   end
